@@ -1,0 +1,11 @@
+{
+  "name": "ryderdet/328/pets",
+  "description": "My First Fat-Free MVC Project",
+  "authors": [{
+    "name": "Ryder",
+    "email":  "rldettloff@gmail.com"
+  }],
+  "require-dev": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
