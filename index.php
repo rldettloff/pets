@@ -1,21 +1,25 @@
 <?php
+/* Ryder Dettloff
+* January 2024
+* https://ryderdettloff.greenriverdev.com/328/diner/
+* This is my Controller
+*/
 
-// This is my CONTROLLER!
-
-// Turn on error reporting
+//Display Errors
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// Require auto-load file
-require_once('vendor/autoload.php');
+//Require the autoload file
 
-// Instantiate Fat-Free Framework basecall
+require_once ('vendor/autoload.php');
+//instance method
 $f3 = Base::instance();
-//$Base f3 = new base (java);
-//echo "test1";
-// Define a default route
-$f3->route('GET /', function() {
-    echo "<h1>Pet Home</h1>";
-});
 
+//Define a default route
+$f3->route('GET /', function() {
+    //echo "Pet Home";
+    $view= new Template();
+    echo $view->render('views/home.html');
+});
+//run fat-free
 $f3->run();
